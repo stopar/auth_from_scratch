@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main>
+      <% flash.each do |type, msg| %>
+        <div class="flash"><%= msg %></div>
+      <% end %>
       <%= link_to "Sign Up", sign_up_path %>
       <%= yield %>
     </main>

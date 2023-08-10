@@ -4,4 +4,19 @@ class RegistrationsController < ApplicationController
   def new
     @user = User.new
   end
+
+  def create
+    @user = User.new(create_params)
+
+    if @user.save
+      flash[:notice] = "Welcome #{@user.email}"
+      redirect_to root_path
+    end
+  end
+
+  private
+
+    def create_params
+      params.require(:user).permit(:email, :password)
+    end
 end
