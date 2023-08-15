@@ -4,13 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    flash[:notice] = "Welcome #{current_user.email}"
+    flash[:notice] = "Welcome #{user.email}"
     redirect_to root_path
   end
 
   private
 
-    def current_user
-      User.find_by(email: params[:email], password: params[:password])
+    def user
+      User.find_by(email: params[:email])
+        &.authenticate(params[:password])
     end
 end
