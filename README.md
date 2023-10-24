@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For Mix-and-Go L9 assignment on Reset password link.
 
-Things you may want to cover:
+* bundle install
 
-* Ruby version
+* rails db:migrate
 
-* System dependencies
+* rspec rspec
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The actual test is written in Rspec System Test at spec/system/forgot_spec.rb
+I implemented an extra check on the reset link token by having a check on the token must need to be valid within 30 minutes

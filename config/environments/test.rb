@@ -57,4 +57,9 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+  
+  # Action mailer cache delivery to deliver in cache
+  config.action_mailer.delivery_method = :cache
+  
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

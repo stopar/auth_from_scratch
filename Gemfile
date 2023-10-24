@@ -70,8 +70,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "rspec-rails", "~> 6.0.0"
+  gem "email_spec"
+  gem "factory_bot_rails"
+  gem "action_mailer_cache_delivery"
 end
 
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "bcrypt", "~> 3.1"
+
+gem "pry"
